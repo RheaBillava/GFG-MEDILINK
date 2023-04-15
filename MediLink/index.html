@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>MediLink</title>
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+
+        <!-- fevicon -->
+        <link rel="icon" href="favicon.ico">
+
+        <!-- fa_awesome -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
+
+        <!-- CSS Stylesheets -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+
+        <!-- Font Awesome -->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+        <!-- Bootstrap Scripts -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      </head>
+<body>
+  <!-- navbar -->
+  <header class="navbar d-block navbar-sticky navbar-expand-lg navbar-light position-absolute w-100 top">
+    <div class="container"><a class="navbar-brand d-none d-sm-block me-4 order-lg-1" href="#"><img src="images/medilink-logo.png" width="142" alt="Cartzilla"></a><a class="navbar-brand d-sm-none me-2 order-lg-1" href="index.html"><img src="img/logo-icon.png" width="74" alt="Cartzilla"></a>
+      <div class="navbar-toolbar d-flex align-items-center order-lg-3">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"><span class="navbar-toggler-icon"></span></button><a class="navbar-tool d-none d-lg-flex" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#searchBox" role="button" aria-expanded="true" aria-controls="searchBox"><span class="navbar-tool-tooltip"><i class="fas fa-search search"></i></span>
+              <div class="navbar-tool-icon-box"><i class="navbar-tool-icon ci-search"></i></div></a><a class="navbar-tool ms-lg-2" href="#signin-modal" data-bs-toggle="modal"><span class="navbar-tool-tooltip"><a target="_blank" href="login.html"><i class="fas fa-user account"></a></i></span>
+              <div class="navbar-tool-icon-box"><i class="navbar-tool-icon ci-user"></i></div>
+              <div class="upload"><button type="button" class="btn btn-outline-info navbar-tool-icon ci-user" class="login"><a class="nav-link px-3" href="#"><i class="fas fa-plus-square upload-add"></i> Upload</i> <input class="upload-input" type="file" name="file"/></a></button>
+              </div><!-- <div class="d-lg-flex col-lg-3 justify-content-lg-end">
+                <button type="button" class="btn btn-outline-info navbar-tool-icon ci-user" class="login"><a class="nav-link px-3" href="#"> Login </a></button>
+              </div> -->
+          </div>
+          <div class="collapse navbar-collapse me-auto order-lg-2" id="navbarCollapse">
+            <!-- Search (mobile)-->
+            <div class="d-lg-none py-3">
+              <div class="input-group"><i class="ci-search position-absolute top-50 start-0 translate-middle-y ms-3"></i>
+                <input class="form-control rounded-start" type="text" placeholder="What do you need?">
+              </div>
+            </div>
+            <!-- Primary menu-->
+            <ul class="navbar-nav">
+              <li class="nav-item active"><a class="nav-link" href="agro.html">Home</a></li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Book</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#doctor">Doctors</a></li>
+                  <li><a class="dropdown-item" href="#hospital">Nearest Hospital</a></li>
+                  <li><a class="dropdown-item" href="nft-single-auction-live.html">Ambulance</a></li>
+                  <li><a class="dropdown-item" href="nft-single-auction-ended.html">COVID-Vaccine Slots</a></li>
+                  <li><a class="dropdown-item" href="nft-single-buy.html">Hospital-Beds</a></li>
+                  <li><a class="dropdown-item" href="#review">Add Reviews</a></li>
+                  <li><a class="dropdown-item" href="#review">View Reviews</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Find</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" target="_blank" href="http://www.covid.com/">COVID-Guidelines</a></li>
+                  <li><a class="dropdown-item" target="_blank" href="code.html">Know about disease with symptoms</a></li>
+                  <li><a class="dropdown-item" target="_blank" href="nft-account-my-collections.html">Medical Records</a></li>
+                  <li><a class="dropdown-item" target="_blank" href="contact.html">Contact Us</a></li>
+                  <li><a class="dropdown-item" target="_blank" href="about_us.html">About Us</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" target="_blank" href="https://www.manipalhospitals.com/goa/specialities/accident-and-emergency-care/">Emergency Service</a></li>
+            </ul>
+          </div>
+    </div>
+    <!-- Search collapse-->
+    <div class="search-box collapse show" id="searchBox" >
+      <div class="container py-2">
+        <div class="input-group"><i class="ci-search position-absolute top-50 start-0 translate-middle-y ms-3"></i>
+          <input class="form-control rounded-start" type="text" placeholder="How can we help you..">
+        </div>
+      </div>
+    </div>
+
+
+  <!-- slidebar -->
+  <div class="pic">
+    <div class="row">
+      <div class="col-md-6 ">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d492479.75883204286!2d73.677032127686!3d15.349486357965363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfba106336b741%3A0xeaf887ff62f34092!2sGoa!5e0!3m2!1sen!2sin!4v1681457901353!5m2!1sen!2sin" width="600" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="col-md-6 wel">
+        <p><h1>WELCOME!
+
+        </h1><h2>Medical care at your fingertips</h2></p>
+          <p><h2>Don't worry here we provide many options to ease your search....</h2>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- rhea -->
+
+  <nav class="nav d-flex justify-content-between menu" >
+
+    <div class="mg p-2" style="width: 70px;">
+    <img class="hospital" src="images\hospital-building.png" alt="hospital" width=60px height = 40px>
+    <h6>40+ Hospitals</h6>
+    </div>
+
+    <div class="mg p-2" style="width: 70px;">
+    <img class="medical-team" src="images\medical-team.png" alt="hospital" width=60px height = 40px>
+    <h6>200+ trusted doctors</h6>
+    </div>
+
+    <div class="mg p-2" style="width: 70px;">
+    <img class="hospital-bed" src="images\hospital-bed.png" alt="hospital" width=60px height = 40px>
+    <h6>1000+ beds</h6>
+    </div>
+
+    <div class="mg p-2" style="width: 70px;">
+    <img class="advice" src="images\advice.png" alt="hospital" width=60px height = 40px>
+    <h6>Prior Appointements</h6>
+    </div>
+
+    <div class="mg p-2" style="width: 70px;">
+    <img class="treatment" src="images\treatment.png" alt="hospital" width=60px height = 40px>
+    <h6>5k patients treated</h6>
+    </div>
+
+    <div class="mg p-2" style="width: 70px;">
+    <img class="ambulance" src="images\ambulance.png" alt="hospital" width=60px height = 40px>
+    <h6>Reach out</h6>
+    </div>
+
+    <div class="mg p-2" style="width: 70px;">
+    <img class="map" src="images\map.png" alt="hospital" width=60px height = 40px>
+    <h6>Maps</h6>
+    </div>
+
+  </nav>
+
+
+  </section>
+
+  <div class="row cards" >
+          <!--item-->
+          <div class="col-lg-3 col-sm-6 mb-4 hover-animate">
+            <div class="card shadow border-0 h-100"><center><img class="img-fluid pics" src="images\hospital-bed.png" width=80px height = 70px ></centers>
+              <div class="card-body"><a class="text-uppercase text-dark text-sm letter-spacing-2" href="#" style="text-decoration: none">Beds</a>
+
+                <p class="text-gray-500 text-sm my-3"><a  href="#" style="text-decoration: none">See Available Beds</a></p>
+                <p class="text-gray-500 text-sm my-3"><a  href="#" style="text-decoration: none">Covid Isolotion Room</a></p>
+                <div class="card-footer">
+                  <a class="btn btn-link ps-0">Book<i class="fa fa-long-arrow-alt-right ms-2"></i></a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <!--item-->
+          <div class="col-lg-3 col-sm-6 mb-4 hover-animate">
+            <div class="card shadow border-0 h-100"><center><img class="img-fluid pics" src="images\medical-record.png" width=80px height = 70px ></centers>
+              <div class="card-body"><a class="text-uppercase text-dark text-sm letter-spacing-2" href="#" style="text-decoration: none">Medical Record</a>
+
+                <p class="text-gray-500 text-sm my-3"><a href="#" style="text-decoration: none">Check Your medical record.</a></p>
+                <p class="text-gray-500 text-sm my-3"><a  href="#" style="text-decoration: none">Share</a></p>
+                <div class="card-footer">
+                  <a class="btn btn-link ps-0" style="text-decoration: none">Consult A Doctor<i class="fa fa-long-arrow-alt-right ms-2"></i></a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <!-- item-->
+          <div class="col-lg-3 col-sm-6 mb-4 hover-animate">
+            <div class="card shadow border-0 h-100"><center><img class="img-fluid pics" src="images\appointment.png" width=80px height = 70px ></centers>
+              <div class="card-body"><a class="text-uppercase text-dark text-sm letter-spacing-2" href="#" style="text-decoration: none">Book an Appointement</a>
+
+                <p class="text-gray-500 text-sm my-3"><a  href="#" style="text-decoration: none">Check Dates</a></p>
+                <p class="text-gray-500 text-sm my-3"><a  href="#" style="text-decoration: none">Hospitals near me</a></p>
+                <div class="card-footer">
+                  <a class="btn btn-link ps-0">Book<i class="fa fa-long-arrow-alt-right ms-2"></i></a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- item-->
+          <div class="col-lg-3 col-sm-6 mb-4 hover-animate">
+            <div class="card shadow border-0 h-100"><center><img class="img-fluid pics" src="images\emergency.png" width=80px height = 70px ></centers>
+              <div class="card-body"><a class="text-uppercase text-dark text-sm letter-spacing-2" href="#" style="text-decoration: none">Emergency services</a>
+
+                <p class="text-gray-500 text-sm my-3"><a  href="#" style="text-decoration: none">Urgent Appointment</a></p>
+                <p class="text-gray-500 text-sm my-3"><a  href="#" style="text-decoration: none">Medical Casualty</a></p>
+                <div class="card-footer">
+                  <a class="btn btn-link ps-0">Reach our Doctor<i class="fa fa-long-arrow-alt-right ms-2"></i></a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <br>
+            <br>
+            <!-- item-->
+            <div class="col-lg-3 col-sm-6 mb-4 hover-animate">
+              <div class="card shadow border-0 h-100"><center><img class="img-fluid pics" src="images\vaccine.png" width=80px height = 70px ></centers>
+                <div class="card-body"><p class="text-uppercase text-dark text-sm letter-spacing-2">Vaccination</ps>
+                  <br>
+                  <p class="text-gray-500 text-sm my-3"> <a href="" style="text-decoration: none">Covid Vaccine</a> </p>
+                  <p class="text-gray-500 text-sm my-3"><a href="" style="text-decoration: none">Vaccine Report</a></p>
+                  <div class="card-footer">
+                    <a class="btn btn-link ps-0" style="text-decoration: none" >Get Yourself Vaccinated<i class="fa fa-long-arrow-alt-right ms-2"></i></a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+              <!-- item-->
+              <div class="col-lg-3 col-sm-6 mb-4 hover-animate">
+                <div class="card shadow border-0 h-100"><center><img class="img-fluid pics" src="images\mother.png" width=80px height = 70px ></centers>
+                  <div class="card-body"><p class="text-uppercase text-dark text-sm letter-spacing-2">Toddlers</ps>
+                    <br>
+                    <p class="text-gray-500 text-sm my-3"> <a href="" style="text-decoration: none">Monthly Checkup</a> </p>
+                    <p class="text-gray-500 text-sm my-3"><a href="" style="text-decoration: none">Health</a></p>
+                    <div class="card-footer">
+                      <a class="btn btn-link ps-0" style="text-decoration: none" >Book appointment with child specialist<i class="fa fa-long-arrow-alt-right ms-2"></i></a>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <!-- item-->
+              <div class="col-lg-3 col-sm-6 mb-4 hover-animate">
+                <div class="card shadow border-0 h-100"><center><img class="img-fluid pics" src="images\prenatal-care.png" width=80px height = 70px ></centers>
+                  <div class="card-body"><p class="text-uppercase text-dark text-sm letter-spacing-2">To Be Moms</ps>
+                    <br>
+                    <p class="text-gray-500 text-sm my-3"> <a href="" style="text-decoration: none">Nutrition Check</a> </p>
+                    <p class="text-gray-500 text-sm my-3"><a href="" style="text-decoration: none">Checkup</a></p>
+                    <div class="card-footer">
+                      <a class="btn btn-link ps-0" style="text-decoration: none" >Urgent Appointement<i class="fa fa-long-arrow-alt-right ms-2"></i></a>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <!-- item-->
+              <div class="col-lg-3 col-sm-6 mb-4 hover-animate">
+                <div class="card shadow border-0 h-100"><center><img class="img-fluid pics" src="images\dentist.png" width=80px height = 70px ></centers>
+                  <div class="card-body"><p class="text-uppercase text-dark text-sm letter-spacing-2">Dentist</ps>
+                    <br>
+                    <p class="text-gray-500 text-sm my-3"> <a href="" style="text-decoration: none">Dental Health</a> </p>
+                    <p class="text-gray-500 text-sm my-3"><a href="" style="text-decoration: none">Do's And Dont's</a></p>
+                    <div class="card-footer">
+                      <a class="btn btn-link ps-0" style="text-decoration: none" >Appointement<i class="fa fa-long-arrow-alt-right ms-2"></i></a>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+
+
+        </div>
+
+
+<!-- Arpi -->
+
+  <p class="heading">MEDILINK Partner Hospital</p>
+  <div class="banner_section layout_padding">
+    <div id="main_slider" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="container a"><img class="back" src="images/hospital-1.png" alt="">
+            <div class="row">
+              <div class="head-1">
+              <div class="col-md-7">
+                <h4 class="banner_taital">North Goa District Hospital,
+                  Mapusa</h4>
+                <p class="banner_text">Variety of renowned and specialist doctors are available with more than 10+ years of work experience</p>
+                <div class="btn_main">
+                  <button type="button" class="btn btn-outline-primary">
+                  <div class="read_bt" id="hospital"><a href="#" style="text-decoration: none">Read More</a></div></button>
+
+                  <button type="button" class="btn btn-outline-primary">
+                  <div class="contact_bt active"><a href="#" style="text-decoration: none">Contact US</a></div></button>
+                </div>
+              </div>
+              <div class="col">
+                <div class="image_1"><img class="img" src="images/hospital-2.png"></div>
+              </div>
+           </div>
+           <div class="head-1">
+
+              <div class="col">
+              <div class="image_1"><img class="img" src="images/hospital-2.png"></div>
+            </div>
+            <div class="col-md-7">
+              <h4 class="banner_taital">South Goa District Hospital, Margoa</h4>
+              <p class="banner_text">Variety of renowned and specialist doctors are available with more than 10+ years of work experience</p>
+              <div class="btn_main">
+                <button type="button" class="btn btn-outline-primary">
+                <div class="read_bt"><a href="#" style="text-decoration: none">Read More</a></div></button>
+
+                <button type="button" class="btn btn-outline-primary">
+                <div class="contact_bt active"><a href="#" style="text-decoration: none">Contact US</a></div></button>
+              </div>
+            </div>
+
+         </div>
+          </div></div>
+
+
+        </div>
+        <div class="carousel-item">
+          <div class="container a"><img class="back" src="images/hospital-1.png" alt="">
+            <div class="row">
+              <div class="head-1">
+
+                <div class="col">
+                <div class="image_1"><img class="img" src="images/hospital-2.png"></div>
+              </div>
+              <div class="col-md-7">
+                <h4 class="banner_taital">Sub District Hospital, Chicalim</h4>
+                <p class="banner_text">Variety of renowned and specialist doctors are available with more than 10+ years of work experience</p>
+                <div class="btn_main">
+                  <button type="button" class="btn btn-outline-primary">
+                  <div class="read_bt" id="hospital"><a href="#" style="text-decoration: none">Read More</a></div></button>
+
+                  <button type="button" class="btn btn-outline-primary">
+                  <div class="contact_bt active"><a href="#" style="text-decoration: none">Contact US</a></div></button>
+                </div>
+              </div>
+
+           </div>
+           <div class="head-1">
+            <div class="col-md-7">
+              <h4 class="banner_taital">Sub District Hospital, Ponda</h4>
+              <p class="banner_text">Variety of renowned and specialist doctors are available with more than 10+ years of work experience</p>
+              <div class="btn_main">
+                <button type="button" class="btn btn-outline-primary">
+                <div class="read_bt"><a href="#" style="text-decoration: none">Read More</a></div></button>
+
+                <button type="button" class="btn btn-outline-primary">
+                <div class="contact_bt active"><a href="#" style="text-decoration: none">Contact US</a></div></button>
+              </div>
+            </div>
+            <div class="col">
+              <div class="image_1"><img class="img" src="images/hospital-2.png"></div>
+            </div>
+         </div>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+        <i class="fa fa-angle-left"></i>
+      </a>
+      <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+        <i class="fa fa-angle-right"></i>
+      </a>
+    </div>
+    <button class="btn-secondary-success bg-light hos"><a href="https://www.goaholidayhomes.com/directory/hospitals-in-goa.html" style="text-decoration: none ">READ MORE</a></button>
+  </div>
+  <hr class="border line-1 opacity-75">
+  <br>
+  <!-- doctors list -->
+
+  <img src="images/injection.png" class="back-2" alt="">
+  <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
+    <div class="col d-flex flex-column align-items-start gap-2 sh">
+      <h3 class="fw-bold">Meet our highly-experienced team of doctors with just one click and rate them.....</h3>
+      <p class="text-body-secondary main-para">"Meet our team of highly trained and dedicated doctors who work together to provide exceptional care for our patients."</p>
+      <a href="https://ifbgoa.goa.gov.in/sites/default/files/LIST-OF-RECOGNIZED-FACTORY-MEDICAL-OFFICERS.pdf" target="_blank" class="btn btn-primary btn-lg" style="text-decoration: none">Read More...</a>
+    </div>
+
+    <div class="col">
+      <div class="row row-cols-1 row-cols-sm-2 g-4">
+        <div class="col-md-6 d-flex flex-column gap-4">
+          <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-6">
+            <img class="doc" src="images/doctor-4.png" alt="">
+          </div>
+          <h4 class="fw-semibold mb-0">Mr Sharma</h4>
+          <p class="text-body-secondary para">Sub-District Hospital, Ponda
+            <br class="ex">Experience: 15+ years
+            <br class="sp">Specialisation: Cancer Treatment
+          </p>
+          <button type="button" class="btn btn-secondary btn-rounded" id="doctor">CLICK</button>
+        </div>
+
+        <div class="col-md-6 d-flex flex-column gap-4">
+          <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-6">
+            <img class="doc" src="images/check-up.png" alt="">
+          </div>
+          <h4 class="fw-semibold mb-0">Ms Sukhwal</h4>
+          <p class="text-body-secondary para">Sub-District Hospital, Chicalim
+            <br class="ex">Experience: 20+ years
+            <br class="sp">Specialisation: Cardiologist
+          </p>
+          <button type="button" class="btn btn-secondary btn-rounded">CLICK</button>
+        </div>
+
+        <div class="col-md-6 d-flex flex-column gap-4">
+          <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-6">
+            <img class="doc" src="images/doctor-2.png" alt="">
+            </div>
+          <h4 class="fw-semibold mb-0">Ms Billava</h4>
+          <p class="text-body-secondary para">South Goa District Hospital, Margoa
+            <br class="ex">Experience: 25+ years
+            <br class="sp">Specialisation: Dermitologist
+          </p>
+          <button type="button" class="btn btn-secondary btn-rounded">CLICK</button>
+        </div>
+
+        <div class="col-md-6 d-flex flex-column gap-4">
+          <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-6">
+          <img class="doc" src="images/doctor-3.png" alt="">
+          </div>
+          <h4 class="fw-semibold mb-0">Mrs Joshi</h4>
+          <p class="text-body-secondary para">North Goa District Hospital, Mapusa
+            <br class="ex">Experience: 25+ years
+            <br class="sp">Specialisation: Orthopedic
+          </p>
+          <button type="button" class="btn btn-secondary btn-rounded ">CLICK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="border opacity-75">
+
+  <!-- testimonials -->
+
+  <section class="bg-light bgt">
+    <div class="container grid-1">
+      <div class="row g-4 g-lg-5 align-items-center grid-2">
+        <div class="col-md-12 order-2 order-xl-1 grid-3">
+          <div class="row mt-0 mt-xl-5">
+            <!-- Review -->
+            <div class="col-md-7 position-relative mb-0 mt-0 mt-md-5 testi-1">
+              <!-- SVG -->
+              <figure class="fill-danger opacity-2 position-absolute top-0 start-0 translate-middle mb-3">
+                <img width="211px" height="211px" class="test" src="images/family.png">
+              </figure>
+
+              <div class="bg-body shadow text text-center p-4 rounded-3 position-relative mb-5 mb-md-0">
+
+                <blockquote>
+                  <p>
+                    <span class="me-1 small"><i class="fas fa-quote-left"></i></span>
+                      We found this website very benificial.I belong to a middle class family and was unable to find a experienced doctor for my son who is suffering from tuberculosis.
+                    <span class="ms-1 small"><i class="fas fa-quote-right"></i></span>
+                  </p>
+                </blockquote>
+                <!-- Rating -->
+                <ul class="list-inline mb-2">
+                  <li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+                  <li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+                  <li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+                  <li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+                  <li class="list-inline-item me-0 small"><i class="fas fa-star-half-alt text-warning"></i></li>
+                </ul>
+                <!-- Info -->
+                <h6 class="mb-0">Lakshmi Naik</h6>
+              </div>
+            </div>
+
+            <!-- Mentor list -->
+            <div class="col-md-5 mt-5 mt-md-0 d-none d-md-block mentor">
+              <div class="bg-body text-1 shadow p-4 rounded-3 d-inline-block position-relative">
+
+                <!-- Title -->
+                <h6 class="mb-3">100+ Experienced doctors in Goa</h6>
+                <!-- Mentor Item -->
+                <div class="d-flex align-items-center mb-3">
+                  <!-- Avatar -->
+                  <div class="avatar avatar-sm">
+                    <img class="avatar-img rounded-1" src="images/doctor-2.png" alt="avatar">
+                  </div>
+                  <!-- Info -->
+                  <div class="ms-2">
+                    <h6 class="mb-0">Alka Singh</h6>
+                    <p class="mb-0 small">Heart Surgeon</p>
+                  </div>
+                </div>
+
+                <!-- Mentor Item -->
+                <div class="d-flex align-items-center mb-3">
+                  <!-- Avatar -->
+                  <div class="avatar avatar-sm">
+                    <img class="avatar-img rounded-1" src="images/doctor.png" alt="avatar">
+                  </div>
+                  <!-- Info -->
+                  <div class="ms-2">
+                    <h6 class="mb-0">Manish Jain</h6>
+                    <p class="mb-0 small">Cancer Specialist</p>
+                  </div>
+                </div>
+
+                <!-- Mentor Item -->
+                <div class="d-flex align-items-center">
+                  <!-- Avatar -->
+                  <div class="avatar avatar-sm">
+                    <img class="avatar-img rounded-1" src="images/doctor-5.png" alt="avatar">
+                  </div>
+                  <!-- Info -->
+                  <div class="ms-2">
+                    <h6 class="mb-0">Madhu Upadhayay</h6>
+                    <p class="mb-0 small">Gynaecologist</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- Row END -->
+
+          <div class="row mt-5 mt-xl-0 rate">
+            <div class="p-3 bg-primary d-inline-block rounded-4 shadow-lg text-center" style="background:url(assets/images/pattern/02.png) no-repeat center center; background-size:cover;">
+                <!-- Info -->
+                <h5 class="text-white mb-0">4.5/5.0</h5>
+                <!-- Rating -->
+                <ul class="list-inline mb-2">
+                  <li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+                  <li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+                  <li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+                  <li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+                  <li class="list-inline-item me-0 small"><i class="fas fa-star-half-alt text-warning"></i></li>
+                </ul>
+                <p class="text-white mb-0">Based on 326 ratings</p>
+              </div>
+            </div>
+
+            <!-- Review -->
+            <div class="col-md-5 mt-n6 mb-0 mb-md-5 middle-test">
+              <div class="bg-body shadow text-center p-4 rounded-3 last-re">
+                <!-- Avatar -->
+                <div class="avatar avatar-xl mb-3">
+                  <img class="avatar-img rounded-circle rounded-1 ava-1" src="images/woman.png" alt="avatar">
+                </div>
+                <!-- Content -->
+                <blockquote>
+                  <p>
+                    <span class="me-1 small"><i class="fas fa-quote-left"></i></span>
+                      Nice experience till now. I was able to get early appointment for my grand-father. I was able to do pre-booking of hosital bed also.
+                    <span class="ms-1 small"><i class="fas fa-quote-right"></i></span>
+                  </p>
+                </blockquote>
+                <!-- Rating -->
+                <ul class="list-inline mb-2">
+                  <li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+                  <li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+                  <li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+                  <li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+                  <li class="list-inline-item me-0 small"><i class="fas fa-star-half-alt text-warning"></i></li>
+                </ul>
+                <!-- Info -->
+                <h6 class="mb-0">Nita Vyas</h6>
+              </div>
+            </div>
+          </div> <!-- Row END -->
+        </div>
+        <div class="col-md-5 order-1 text-center text-xl-start last-test">
+          <!-- Title -->
+          <h2 class="fs-1">Some valuable feedback from our Users</h2>
+          <p class="par">We got many valuable reviews from our viewers and we it both benificial and appreciating. Users can upload their reports and send those those reports to any doctor while sitting at home and we have also contacted with may hospitals who will upload your reports on your account so that you don't have to upload by yourself.</p>
+          <a class="btn btn-primary mb-0 more" href="view_reviews.html" target="_blank" id="review" style="text-decoration: none">View Reviews</a>
+          <a class="btn btn-outline-success" href="add_reviews.html" target="_blank" id="review" style="text-decoration: none">Add Reviews</a>
+          <!-- <button type="button" class="btn btn-outline-success" >Add Reviews</button> -->
+        </div>
+      </div> <!-- Row END -->
+    </div>
+  </section>
+
+  <!-- footer section start -->
+  <div class="footer_section">
+    <div class="container k">
+      <div class="footer_location_text">
+        <ul class="loc">
+          <li class="loc-a"><i class="fas fa-map-marker-alt "></i><span class="padding_left_10"><a href="#" style="text-decoration: none">  MEDILINK
+                web</a></span></li>
+          <li class="loc-a"><i class="fas fa-phone "></i><span class="padding_left_10"><a href="#" style="text-decoration: none">  Call : +7586656566</a></span>
+          </li>
+          <li class="loc-a"><i class="fas fa-envelope "></i><span class="padding_left_10"><a href="http://www.gmail.com/" style="text-decoration: none">  demo@gmail.com</a></span></li>
+        </ul>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-sm-6">
+          <h2 class="useful_text">About Us </h2>
+          <div class="footer_menu">
+            <ul class="loc-1">
+              <li><a href="mission.html" style="text-decoration: none">Mission</a></li>
+              <li><a href="vission.html" style="text-decoration: none">Vision</a></li>
+              <li><a href="contact.html" style="text-decoration: none">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <h2 class="useful_text">For Patients</h2>
+          <ul class="loc-1">
+            <li><a href="https://www.mohfw.gov.in/" style="text-decoration: none">COVID Guidelines</a></li>
+            <li><a href="https://www.goaholidayhomes.com/directory/hospitals-in-goa.html" style="text-decoration: none">Hospitals</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <h2 class="useful_text">Social Media</h2>
+          <div class="social_icon">
+            <ul class="loc-e">
+              <li class="loc-d"><a class="resize" href="https://www.facebook.com/" target="_blank" style="text-decoration: none"><i class="fab fa-facebook-square ic"></i></a></li>
+              <li class="loc-d"><a href="https://www.twitter.com/" target="_blank" style="text-decoration: none"><i class="fab fa-twitter-square ic"></i></a></li>
+              <li class="loc-d"><a href="https://www.linkedin.com/" target="_blank" style="text-decoration: none"><i class="fab fa-linkedin ic"></i></a></li>
+              <li class="loc-d"><a href="https://www.youtube.com/" target="_blank" style="text-decoration: none"><i class="fab fa-youtube-square ic"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <h1 class="useful_text"><img src="images/medilink-logo.png" alt=""></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end info section -->
+  <!-- footer section end -->
+  <!-- copyright section start -->
+  <div class="copyright_section">
+    <div class="container">
+      <p class="copyright_text">2023 All Rights Reserved. Designed by Arpita Sukhwal and Rhea Billava</p>
+    </div>
+  </div>
+  <!-- copyright section end -->
+
+  <script src="java.js"></script>
+</body>
+</html>

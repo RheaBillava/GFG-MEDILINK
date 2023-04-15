@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+      
+    <title>add_reviews</title>
+</head>
+<body>
+    <style>
+        body {
+            background-image: linear-gradient(#66b2f5, #7ef8ec);
+            background-repeat: no-repeat;
+            color: #000;
+            overflow-x: hidden;
+        }
+        
+        a {
+            text-decoration: none !important;
+            color: inherit;
+        }
+        
+        a:hover {
+            color: #455A64;
+        }
+        
+        .card {
+            border-radius: 5px;
+            background-color: #fff;
+            padding-left: 60px;
+            padding-right: 60px;
+            margin-top: 30px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        
+        .rating-box {
+            width: 130px;
+            padding: auto;
+            margin-right: auto;
+            margin-left: auto;
+            background-color: #90cdf9;
+            color: #fff;
+        }
+        
+        .rating-label {
+            font-weight: bold;
+        }
+        
+        /* Rating bar width */
+        .rating-bar {
+            width: 300px;
+            padding: 8px;
+            border-radius: 5px;
+        }
+        
+        /* The bar container */
+        .bar-container {
+          width: 100%;
+          background-color: #f1f1f1;
+          text-align: center;
+          color: white;
+          border-radius: 20px;
+          cursor: pointer;
+          margin-bottom: 5px;
+        }
+        
+        /* Individual bars */
+        .bar-5 {
+            width: 70%;
+            height: 13px;
+            background-color: #FBC02D; 
+            border-radius: 20px;
+        
+        }
+        .bar-4 {
+            width: 30%;
+            height: 13px;
+            background-color: #FBC02D; 
+            border-radius: 20px;
+        
+        }
+        .bar-3 {
+            width: 20%;
+            height: 13px;
+            background-color: #FBC02D; 
+            border-radius: 20px;
+        
+        }
+        .bar-2 {
+            width: 10%;
+            height: 13px;
+            background-color: #FBC02D; 
+            border-radius: 20px;
+        
+        }
+        .bar-1 {
+            width: 0%;
+            height: 13px;
+            background-color: #FBC02D; 
+            border-radius: 20px;
+        
+        }
+        
+        td {
+            padding-bottom: 10px;
+        }
+        
+        .star-active {
+            color: #FBC02D;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .star-active:hover {
+            color: #F9A825;
+            cursor: pointer;
+        }
+        
+        .star-inactive {
+            color: #CFD8DC;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .blue-text {
+            color: #0091EA;
+        }
+        
+        .content {
+            font-size: 18px;
+        }
+        
+        .profile-pic {
+            width: 90px;
+            height: 90px;
+            border-radius: 100%;
+            margin-right: 30px;
+        }
+         
+        .pic {
+            width: 80px;
+            height: 80px;
+            margin-right: 10px;
+        }
+        
+        .vote {
+            cursor: pointer;
+        }
+        .pt-4{
+            padding-left: 40px;
+            margin-bottom: 0%;
+        }
+        .pt-5{
+            padding-left: 35px;
+            padding-top: 0px;
+            margin-top: 0%;
+        }
+        .para-main{
+            text-align: center; 
+            width:600px; 
+            padding: auto;
+            margin: auto;
+        }
+        .add{
+            width: 150px;
+            height: 50px;
+            background-color: #F9A825;
+            margin-left: 47%;
+            padding: auto;
+        }
+    </style>
+    <h1 style="text-align: center;">Hello Everyone</h1>
+    <p><h3 class="para-main">Since its been a long time and we have have collected a couple of reviews and we want to share those reviews with all of you an dhope so that you will spare some time to add views so that we can take necessary measures to correct those issues....</h3></p>
+    <div class="container-fluid px-1 py-5 mx-auto">
+        <div class="row justify-content-center">
+            <div class="col-xl-7 col-lg-8 col-md-10 col-12 text-center mb-5">
+                <div class="card">
+                    <div class="row justify-content-left d-flex">
+                        <div class="col-md-4 d-flex flex-column">
+                            <div class="rating-box">
+                                <h1 class="pt-4">4.0</h1>
+                                <p class="pt-5">out of 5</p>
+                            </div>
+                            <div>
+                                <span class="fa fa-star star-active mx-1"></span>
+                                <span class="fa fa-star star-active mx-1"></span>
+                                <span class="fa fa-star star-active mx-1"></span>
+                                <span class="fa fa-star star-active mx-1"></span>
+                                <span class="fa fa-star star-inactive mx-1"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="rating-bar0 justify-content-center">
+                                <table class="text-left mx-auto">
+                                    <tr>
+                                        <td class="rating-label">Excellent</td>
+                                        <td class="rating-bar">
+                                            <div class="bar-container">
+                                              <div class="bar-5"></div>
+                                            </div>
+                                        </td>
+                                        <td class="text-right">123</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="rating-label">Good</td>
+                                        <td class="rating-bar">
+                                            <div class="bar-container">
+                                              <div class="bar-4"></div>
+                                            </div>
+                                        </td>
+                                        <td class="text-right">23</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="rating-label">Average</td>
+                                        <td class="rating-bar">
+                                            <div class="bar-container">
+                                              <div class="bar-3"></div>
+                                            </div>
+                                        </td>
+                                        <td class="text-right">10</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="rating-label">Poor</td>
+                                        <td class="rating-bar">
+                                            <div class="bar-container">
+                                              <div class="bar-2"></div>
+                                            </div>
+                                        </td>
+                                        <td class="text-right">3</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="rating-label">Terrible</td>
+                                        <td class="rating-bar">
+                                            <div class="bar-container">
+                                              <div class="bar-1"></div>
+                                            </div>
+                                        </td>
+                                        <td class="text-right">0</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="row d-flex">
+                        <div class="">
+                            <img class="profile-pic" src="images/man.png">
+                        </div>
+                        <div class="d-flex flex-column">
+                            <h3 class="mt-2 mb-0">Vikram jit Singh</h3>
+                            <div>
+                                <p class="text-left"><span class="text-muted"></span>
+                                <span class="fa fa-star star-active ml-3"></span>
+                                <span class="fa fa-star star-active"></span>
+                                <span class="fa fa-star star-active"></span>
+                                <span class="fa fa-star star-active"></span>
+                                <span class="fa fa-star star-inactive"></span></p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="row text-left">
+                        <h4 class="blue-text mt-3">"An awesome experience"</h4>
+                        <p class="content">I was able to consult doctor with just entering my symptoms...</p>
+                    </div>
+                    
+                    <div class="row text-left mt-4">
+                        <div class="like mr-3 vote">
+                            <img src="https://i.imgur.com/mHSQOaX.png"><span class="blue-text pl-2">20</span>
+                        </div>
+                        <div class="unlike vote">
+                            <img src="https://i.imgur.com/bFBO3J7.png"><span class="text-muted pl-2">4</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<button class="add"><a class="btn btn-outline-success " href="add_reviews.html" target="_blank" id="review">Add Reviews</a></button>
+</body>
+</html>
